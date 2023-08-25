@@ -75,21 +75,33 @@ class CowinDashboard extends Component {
             <h1>Co-WIN</h1>
           </div>
           <h1>CoWIN Vaccination in India</h1>
-          <VaccinationCoverage
-            lastSevenDaysVaccination={lastSevenDaysVaccination}
-          />
-          <VaccinationByAge vaccinationByAge={vaccinationByAge} />
-          <VaccinationByGender vaccinationByGender={vaccinationByGender} />
+          <div>
+            <h1>Vaccination Coverage</h1>
+            <VaccinationCoverage
+              lastSevenDaysVaccination={lastSevenDaysVaccination}
+            />
+          </div>
+          <div>
+            <h1>Vaccination by Gender</h1>
+            <VaccinationByGender vaccinationByGender={vaccinationByGender} />
+          </div>
+          <div>
+            <h1>vaccination by Age</h1>
+            <VaccinationByAge vaccinationByAge={vaccinationByAge} />
+          </div>
         </div>
       </>
     )
   }
 
   renderFailureView = () => (
-    <img
-      src="https://assets.ccbp.in/frontend/react-js/api-failure-view.png"
-      alt="failure view"
-    />
+    <div>
+      <img
+        src="https://assets.ccbp.in/frontend/react-js/api-failure-view.png"
+        alt="failure view"
+      />
+      <h1>Something went wrong</h1>
+    </div>
   )
 
   renderLoadingView = () => (
